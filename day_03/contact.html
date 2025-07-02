@@ -1,0 +1,48 @@
+
+<html>
+    <head>
+        <Style>
+            h2{
+                font-family: Arial, sans-serif;
+                margin-bottom: 10px;
+            }
+            ul{
+                list-style-type:none;
+                margin: 0;
+                padding: 0;
+                width: 300px;
+                display: flex;
+                background-color: #ca9346;
+            }
+            li a{
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+
+            }
+            li a.active{
+                background-color: #543c05;
+                color: white;
+            }
+            li a:hover:not(.active){
+                background-color: rgba(194, 114, 40, 0.9);
+                color:#f1f1f1
+            }
+        </Style>
+    </head>
+<body>
+    <h2>
+        Navigation Menu
+    </h2>
+
+    <ul>
+        <li ><a  href="home.html"> Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a  class="active" href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</body>
+
+
+</html>
