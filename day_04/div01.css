@@ -1,0 +1,43 @@
+/* body{
+    background-color: rgba(226, 74, 74, 0.5);
+} */
+.container{
+    background-color: rgb(244, 245, 248);
+    padding: 10px;
+    margin : 10px ;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap:50px 
+   
+
+}
+h1{
+    color: rgb(12, 13, 0);
+    text-align: center;
+}
+.container div{
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+.item1{
+    
+grid-column:1 / span 3;
+background-color: rgb(119, 14, 217);
+color: rgb(13, 0, 0);
+font-size:40;
+font-weight: 800;
+}
+.item2{
+    grid-row: 2 / span 3;
+    background-color:rgb(237, 242, 237);
+    display: grid;
+    grid-template-columns: auto ;
+    row-gap:10px;
+}
+.skill{
+    background-color: rgb(54, 167, 228);
+}
+.skill:hover{
+    background-color: rgb(54, 95, 228);
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function sum() {
+            var num = document.getElementById("num1").value;
+            var ans = 0;
+            for (let i = 0; i < num.length; i++) {
+                ans += Number(num[i]);
+            }
+            document.getElementById("ans1").value = ans;
+        }
+
+        function large() {
+            var num = parseInt(document.getElementById("num1").value);
+            let ld = 0;
+            while (num > 0) {
+                let rem = num % 10;
+                if (rem > ld) ld = rem;
+                num = Math.floor(num / 10);
+            }
+            document.getElementById("ans1").value = ld;
+        }
+
+        function small() {
+            var num = parseInt(document.getElementById("num1").value);
+            let sd = 9;
+            while (num > 0) {
+                let rem = num % 10;
+                if (rem < sd) sd = rem;
+                num = Math.floor(num / 10);
+            }
+            document.getElementById("ans1").value = sd;
+        }
+
+        function reverse() {
+            var num = document.getElementById("num1").value;
+            let rev = num.split('').reverse().join('');
+            document.getElementById("ans1").value = rev;
+        }
+    </script>
+
+
+<style>
+    body{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+    }
+    .d{
+        width: 300px;
+        height: 300px;
+        margin-top:50px ;
+        margin-left:50px;
+        padding: 30px;
+        border-radius: 32px;
+        background-color: chartreuse;
+    }
+.item1{
+    margin-bottom: 20px;
+    
+}
+.item2 button
+{
+    margin-left:10px ;
+    margin-top:10px ;
+    border-radius: 10px;
+    align-self: center;
+    justify-content: center;
+
+}
+input{
+    width: 150px;
+}
+h1{
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+    <div class="d">
+        <h1>Operations on Numbers</h1>
+ <div class="item1">  Enter Numbers: <input type="number" id="num1" /> </div> 
+ <div class="item2">   <button onclick="sum()">Sum of Digits</button>
+  <button onclick="large()">Largest Digit</button>
+    <button onclick="small()">Smallest Digit</button>
+    <button onclick="reverse()">Reverse Digits</button></div> 
+  <div class="item1"> <br> Ans: <input id="ans1" /></div>
+    </div>
+</body>
+
+</html>
