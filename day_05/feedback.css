@@ -1,0 +1,83 @@
+*{
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+body{
+    background-color: #38b7e9;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+
+    border: 2px solid #1b2b30;
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    width: 400px;
+    height: 350px;
+    text-decoration:dashed;
+     justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+}
+.age label{
+    margin-left:10px ;   
+}
+.gmail  {
+    margin-top: 10px;
+}
+.gmail label{
+    margin-left: 10px;
+}
+
+input{
+    border: 0;
+    display:inline;
+    justify-content: center;
+    padding: 2px;
+    border-radius: 20px;
+    margin-left: 10px;
+
+}
+h2{
+    text-align: center;
+    text-decoration: underline solid rgb(47, 162, 238);
+}
+.name{
+    width: 100%;
+    word-spacing: 5px;
+    border: 10px;
+    margin: 10px;
+    display: flex;
+    
+}
+select{
+    border: 0;
+    width: 50px;
+    border-radius: 10px;
+}
+option{
+    border-radius: 10px;
+}
+.check{
+    border-radius: 40px;
+}
+.d{
+    display:inline;
+    justify-content: center;
+    align-items: center;
+    word-spacing: -2;
+}
+button{
+    border: 2px solid rgb(186, 121, 121);
+    margin-top: 10px;
+    margin-left: 120px;
+    border-radius: 20px;
+    padding: 10px;
+    width: 70px;
+    
+}
