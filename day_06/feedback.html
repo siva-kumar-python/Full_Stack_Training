@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faculty Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 30px;
+      display: flex;
+      width: 100%;
+      height: 100vh;
+
+      justify-content: center;
+
+      
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    h2{
+        text-align: center;
+    }
+    div{
+         padding: 20px;
+        border: 5px solid #ccc;
+        width: 300px;
+        height: 70vh;
+       
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Faculty Feedback Form</h2>
+  <div>
+  <form id="userForm" onsubmit="showData()">
+    <label>
+      Faculty Name: <br>
+      <input type="text" id="name" required>
+    </label>
+
+    
+    <label>
+      Trainner Attended : <br>
+      <select id="tname"  >
+        <option value="">-----Select-----</option>
+        <option value="python">Python</option>
+        <option value="pythonfullstack">Python Full Stack</option>
+        <option value="Java">Java</option>
+        <option value="Javafullstack">Java Full Stack</option>
+      </select>
+    </label>
+    <label>
+      Overall Rating: <br><br>
+      <input type="radio" name="rating" value="excelent" required> Excelent
+      <input type="radio" name="rating" value="good"> Good <br><br>
+      <input type="radio" name="rating" value="average"> Average
+      <input type="radio" name="rating" value="poor"> Poor
+    </label>
+
+    </label>
+
+
+    <label>
+      Topics Covered : <br> <br>
+      <input type="checkbox" name="topic" value="python"> Python <br> <br>
+      <input type="checkbox" name="topic" value="Full stack python"> FullStack with Python <br> <br>
+      <input type="checkbox" name="topic" value="Java"> Java <br> <br>
+      <input type="checkbox" name="topic" value="Java full stack"> Fullstack with Java <br> <br>
+
+    </label>
+
+    <label>
+        suggestions/comments : <br> 
+            <textarea rows="4" cols="30"  id="comments" placeholder="Write Your feedback here..."></textarea>
+
+    </label>
+    <br>
+    <button type="submit">Submit Feedback</button>
+  </form>
+</div>
+
+
+
+  <script>
+    function showData() {
+
+      let name = document.getElementById("name").value;
+      let rating = document.querySelector('input[name="rating"]:checked')?.value;
+      let tname = document.getElementById("tname").value;
+    let comments = document.getElementById("comments").value;
+      let topic = [];
+      document.querySelectorAll('input[name="topic"]:checked').forEach(cb => {
+        topic.push(cb.value);
+      });
+
+      let message = `Facalty Name: ${name}\n
+      Training attended: ${tname}\n
+      Rating: ${rating}\n
+      topics covered: ${topic.join(", ")}\n
+      Suggestions : ${comments}`;
+      alert(message);
+    }
+  </script>
+
+</body>
+</html>

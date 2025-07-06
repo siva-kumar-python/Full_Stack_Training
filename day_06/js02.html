@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+function printTable()
+{
+    // const num1=parseInt(prompt(`Enter an Integer : `));
+var num=parseInt(document.getElementById("num1").value);
+
+    for (var  i=0 ; i<11;i++)
+    {
+    document.write(num+" x " +i+" = "+num*i);
+    document.write("<br/>");
+    }
+}
+
+    </script>
+</head>
+
+<body>
+    Enter number : <input type="number" id ="num1" /> <br> <br>
+    <button onclick="printTable()">PrintTable</button>
+</body>
+
+</html>

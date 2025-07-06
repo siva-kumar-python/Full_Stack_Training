@@ -1,0 +1,34 @@
+<html>
+<head>
+
+    <script>
+function fun(){
+    var x = document.getElementById("num").value;
+    var inp="";
+    if( isNaN(x) || x<1000000000 ||x>9999999999 ){
+        inp="Invalid Number";
+    }
+    else{
+        inp="Valid number";
+    }
+    document.getElementById("demo").innerHTML=inp;
+
+
+
+}
+
+    </script>
+</head>
+<body>
+    <p>
+        enetr a number in between 1 to 10 
+    </p>
+    <input  id="num" required>
+    <input type="button" onclick="fun()" value="check"> </input>
+
+    <p id ="demo"> </p>
+
+
+</body>
+
+</html>
