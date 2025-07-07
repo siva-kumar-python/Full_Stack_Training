@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+<head>
+    <title>Login </title>
+    <link rel="stylesheet" href='{% static "css/loginform.css" %}'>
+</head>
+<body >
+    <div id ="d">
+      <img src='{% static "img/mtic.png" %}'>
+        <h1>MOTHER THERESA</h1>
+    <h2  align="">Login Form </h2>
+    <form action="/submit-login" method ="POST" >
+<div>
+    <label for="user_id">UserName :</label> <input type="text" name ="userName"   placeholder="User Name"  required> <br>
+    <br>
+</div>
+<div>
+   <label for="Password"> Password :</label> <input type="text" name ="password"  placeholder="Password"  required> <br> <br>
+</div>
+<div>
+    <input type="checkbox"> <label for="remindme">Remember Me <br> <br>
+</div>
+<br><button type="submit">Login</button>
+<button type="submit" src="app.html">Exit</button><br><br>
+
+<a href="app.html">Forget Password ?</a>
+
+
+
+     </form>
+
+</div><br>
+     
+    
+</body>
+
+</html>

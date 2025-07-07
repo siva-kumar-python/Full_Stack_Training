@@ -1,0 +1,34 @@
+body{
+    margin: auto;
+    background-color:rgb(92, 193, 247);
+    width: 1000px;
+    height: 1000px;
+    display:flex;
+    justify-content: center;
+    position:fixed;
+    align-items: center;
+    
+}
+
+h2{
+    color:rgb(0, 5, 10)
+}
+#d{
+    width: 500px;
+    height: 500px;
+    margin-top: 10px;
+    margin-left: 100px;
+    padding: 20px;
+    align-self: center;
+    display:flex;
+    border-radius: 20px;
+    background-color:rgb(100, 161, 247);
+    flex-direction: column;
+    justify-content: center;
+  
+    align-items: center;
+   
+}
+
+
+    

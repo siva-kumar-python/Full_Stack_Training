@@ -1,0 +1,106 @@
+<html>
+<head> 
+    <script>
+function add()
+{
+var num1,num2,sum;
+num1=parseInt(document.getElementById("first_number").value);
+num2=parseInt(document.getElementById("second_number").value);
+sum=num1+num2;
+document.getElementById("sum").value=sum;
+
+}
+function sub()
+{
+var num1,num2,sum;
+num1=parseInt(document.getElementById("first_number").value);
+num2=parseInt(document.getElementById("second_number").value);
+sum=num1-num2;
+document.getElementById("sum").value=sum;
+
+}
+function mul()
+{
+var num1,num2,sum;
+num1=parseInt(document.getElementById("first_number").value);
+num2=parseInt(document.getElementById("second_number").value);
+sum=num1*num2;
+document.getElementById("sum").value=sum;
+
+}
+function reset()
+{
+(document.getElementById("first_number").value)=0;
+(document.getElementById("second_number").value)=0;
+(document.getElementById("sum").value)=0;
+
+
+}
+    </script>
+<style>
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top:30px;
+    padding: 20px;
+    /* border: 5px solid black; */
+    border-radius: 64px;
+    background-color: blanchedalmond;
+}
+div{
+    width: 400px;
+    margin-left: 20px;
+    padding: 50px;
+    flex-direction: row;
+    box-shadow : 10px; 
+
+    align-items: center; 
+    border: 5px solid rgb(127, 193, 127);
+    background-color: rgb(101, 101, 237);
+    border-radius: 64px;
+}
+button{
+    margin-left: 20px;
+    width: 50px;
+    border-radius: 20px;
+    outline: none;
+    padding: 5px;
+    justify-content: center;
+    /*flex-direction: column;*/
+}
+button:hover{
+    background-color: rgb(96, 218, 231);
+    border:0;
+}
+input{
+    border-radius: 32px;
+    border: 0;
+}
+
+</style>
+
+</head>
+<body>
+    <div>
+         <h1><u>Math Operations</u> </h1>
+  
+  
+  First Number :
+            <input type="number" id ="first_number"><br><br>
+      secon Number :
+           <input  id ="second_number" ><br><br>
+        <button onclick="add()">Add</button>
+        <button onclick="sub()">sub</button>
+        <button onclick="mul()">mul</button>
+        <button onclick="reset()">reset</button><br><br>
+       sum
+            <input  id ="sum" />
+    
+
+  
+</div>
+</body>
+
+
+</html>
