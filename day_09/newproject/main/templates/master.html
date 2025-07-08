@@ -1,0 +1,37 @@
+{% load static %}
+
+<html><head>
+<link rel="stylesheet"  href="{% static 'css/homecss.css' %}"> 
+</head><body>
+<div class="navbar">
+  <a href=''>Home</a>
+<!--   <a href="#">Frames</a>    -->
+<div class="dropdown">
+  <button class="dropbtn">Student</button>
+       <div class="dropdown-content">
+  	<a href="{% url 'add_student' %}">Add</a>
+ 	<a href="{% url 'edit_student' %}">Edit</a>
+	<a href="{% url 'delete_student' %}">Delete</a>
+ 	<a href="{% url 'list_students' %}">View</a>
+        </div> </div>
+
+
+
+   <div class="dropdown">
+  <button class="dropbtn">Facalty</button>
+       <div class="dropdown-content">
+		 <div class="dropdown-content">
+  	<a href="{% url 'add_student' %}">Add</a>
+ 	<a href="{% url 'edit_student' %}">Edit</a>
+	<a href="{% url 'delete_student' %}">Delete</a>
+ 	<a href="{% url 'list_students' %}">View</a>
+        </div> </div>
+	<div class="login" >
+	<a href="#login.html">Login</a>
+	</div>
+</div>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
