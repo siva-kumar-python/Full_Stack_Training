@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>canteen items</title>
+    <style>
+        img { width: 100px; height: 100px; }
+        .product { display: flex; } 
+    </style>
+</head>
+<body>
+    {% block content %}
+    <h1>Canteen Items</h1>
+     <div  style="display: flex; flex-direction: row; justify-content: space-between;">
+    {% for i in canteens %}
+   
+        <div  >
+            {% if i.image %}
+                <img src="{{ i.image.url }}" alt="{{ i.name }}">
+            {% endif %}
+            <a href="{% url 'canteen_detail' i.pk %}"><h2>{{ i.name }}</h2></a>
+            <p><h2>Rs{{ i.price }}</h2></Rs></p>
+        </div>
+    {% endfor %}
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+{% load static %}
+
+<html><head>
+<link rel="stylesheet"  href="{% static '/css/homecss.css' %}"> 
+</head><body>
+<div class="navbar">
+  <a href="{% url 'home' %}">Home</a>
+  <a href="{% url 'canteen_list' %}">Canteen</a>
+  <a href="#">Bakery</a>
+</div>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

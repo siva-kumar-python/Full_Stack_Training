@@ -1,0 +1,6 @@
+{% extends 'master.html' %}
+{%  load static  %}
+{% block content %}
+<br><a href="{% url 'canteen_list' %}"><img src="{% static 'img/canteen.jpg' %}" alt=""></a><br>
+<a href="{% url 'canteen_list' %}"><h2>Canteen</h2></a>
+{% endblock %}

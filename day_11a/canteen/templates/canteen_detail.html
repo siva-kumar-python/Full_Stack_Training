@@ -1,0 +1,18 @@
+{% extends 'master.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ canteen.name }}</title>
+</head>
+<body>
+    {% block content %}
+    <h1>{{ canteen.name }}</h1>
+    {% if canteen.image %}
+        <img src="{{ canteen.image.url }}" alt="{{ canteen.name }}">
+    {% endif %}
+    <p>Price: Rs. {{ canteen.price }}</p>
+    <a href="/">Back to Products</a>
+{% endblock %}
+</body>
+</html>
+
