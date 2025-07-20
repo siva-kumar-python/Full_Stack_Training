@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+
+<head>
+	<link rel="stylesheet" href="{% static 'css/college_styles.css' %}">
+    {% block styles %} {% endblock %}
+</head>
+
+<body>
+	<nav>
+        <img src='{% static "img/logo.png" %}' alt="College logo">
+        <ul>
+            <li><a href="#">Mother Theresa Institutions Canteen, Palamaner</a></li>
+        </ul>
+
+    </nav>
+	<div class="navbar">
+		<a href="{% url 'product_list' %}">Home</a>
+		
+        <a href="{% url 'view_cart' %}">View Cart</a>
+		<div class="login">
+            {% if request.user.is_authenticated %}
+                <span class="welcome-message">Welcome, {{ request.user.username }}!</span>
+                <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+            {% else %}
+                <a href="{% url 'login' %}">Login</a>
+            {% endif %}
+        </div>
+
+	</div>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+<footer>
+    &copy; 
+    <p>C Shiva Kumar </p>
+    <a href="mailto:sivakumar135siva@gmail.com">sivakumar135siva@gmail.com</a>
+</footer>
+
+</html>
